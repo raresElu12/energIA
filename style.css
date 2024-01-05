@@ -24,7 +24,7 @@ a{
 #search-bar a{
     text-decoration:none;
     color:rgb(66, 181, 148);
-    font-size:16pt;
+    font-size:0.6em;
 
 }
 #search-bar,header{
