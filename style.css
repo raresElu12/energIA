@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+*{
+    font-family:'Quicksand';
+} 
+
+
+a{
+    text-decoration:none;
+    color:Black;
+}
+#search-bar{
+    position:relative;
+    top:20px;
+    width:100%;
+    display:inline-flex;
+    flex-wrap:nowrap;
+    justify-content:center;
+    gap:15%;
+}
+#search-bar a{
+    width:10%;
+    color:rgb(53, 131, 109);
+    font-size:14pt;
+}
+h1{
+    position:relative;
+    left:40%;
+}
+h2{
+    position:relative;
+    left:32%;
+    letter-spacing:1px;
+}
+
+body{
+    width:108%;
+    overflow-x:hidden;
+}
+
+nav:not(#search-bar){
+    position:relative;
+    top:-100px;
+}
+#datetime{
+    position:relative;
+    right:-80%;
+    top:-100px;
+}
+header{
+    display:flex;
+    flex-wrap:nowrap;
+    height:40px;
+    width:100%;
+    justify-content:center;
+    gap:20%;
+    top:300px;
+}
+header h1{
+    left:5px;
+    margin:0px;
+}
+nav:not(#search-bar) a:hover{
+    text-decoration:underline;
+}
+.vl{
+    border-right:1px solid black;
+    height:200%;
+    position:absolute;
+    top:300px;
+    width:2px;
+    left:40%;
+}
+#bar2{
+    left:70%;
+}
+#bar3{
+    left:100%;
+}
+img{
+    width:13%;
+    height:auto;
+    margin-left:10%;
+}
+section{
+    position:relative;
+    top: 40px;
+}
+aside{
+    overflow-wrap:break-word;
+    text-align:justify;
+    max-width:35%;
+}
+nav#lang{
+    position:absolute;
+    top:42px;
+    right:90%;
+}
+#selected{
+    text-decoration:underline;
+    font-weight:800;
+}
+
+#innovations{
+    position:absolute;
+    left:43%;
+    top:40%;
+}
+
+#innovations img{
+    position:relative;
+    width:25%;
+    right:5%;
+}
+

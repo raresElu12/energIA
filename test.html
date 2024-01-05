@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="author" content="HSR">
+        <meta name="keywords" content="Energie AI IA Environnement Renouvelable Vert">
+        <meta name="description" content="Un site promouvant les IA et leurs capacités d'améliorer notre avenir en ce qui concerne la gestion des energies renouvelables.">
+        <meta lang="fr">
+        <meta charset="utf-8">
+        <title>EnergIA</title>
+        <link href="style.css" rel="stylesheet" >
+    </head>
+    <body>
+        <h1>EnergIA</h1>
+        <h2>Sûr comme l'IA, doux comme l'avenir</h2>
+        <p id="datetime"></p>
+        <script>
+            function time(){
+                let now = new Date();
+                let datetime = now.toLocaleString("fr-FR");
+
+                document.getElementById("datetime").innerHTML = datetime.slice(10,datetime.length-3);
+            }
+            setInterval(() => {time()}, 1000);
+        </script>
+        <nav id="lang"><a href="#"><b>FR</b></a> | <a href="#">EN</a></nav>
+        <nav id="search-bar">
+            <a href="#">
+                Qui sommes nous?
+            </a> 
+            <a id="selected" href="#">Energie Renouvelable</a>
+            <a href="#">IA</a>
+            <a href="#">Environnement</a> 
+        </nav>
+        <br><br><br><br><br><br><br>
+        <header>
+            <h1>Nouvelles</h1>
+            <h1>Innovations</h1>
+            <h1>Implémentations</h1>
+        </header>
+        <div class="vl" id="bar1"></div>
+        <div class="vl" id="bar2"></div>
+        <div class="vl" id="bar3"></div>
+        <hr>
+        <section class="Er" id="nouvelles">
+            <img src="images/pic1.jpg">
+            <aside>
+                <p>Ea voluptate minim qui incididunt dolor quis sit consectetur. Exercitation non deserunt voluptate laboris labore ut et tempor. Ut fugiat magna sint labore ullamco officia cillum.Labore amet aute quis enim ad tempor occaecat tempor. Eu irure consequat magna incididunt qui deserunt ut eu excepteur aute. Ullamco dolor incididunt non eiusmod. Sunt do incididunt sunt ea ullamco consequat.Nisi elit ea aliqua magna veniam tempor nulla nulla fugiat. Minim irure ullamco proident mollit nostrud ipsum sint qui. Sit nostrud pariatur anim aute tempor laboris sint aliquip nostrud. Occaecat ex id ad fugiat tempor nisi ad ullamco consectetur adipisicing ut tempor aliquip nisi. Nulla mollit veniam dolor nostrud elit cupidatat aliqua consectetur occaecat et laborum. Do laboris fugiat aliqua aliquip velit.Adipisicing sunt sint irure adipisicing incididunt occaecat deserunt excepteur. Nostrud laborum in enim dolor magna ipsum id amet in laborum ad cupidatat enim. Proident pariatur velit laborum incididunt ullamco excepteur. Ad aute deserunt tempor enim et.</p>
+            </aside>
+
+            <img src="images/pic1.jpg">
+            <aside>
+                <p>Ea voluptate minim qui incididunt dolor quis sit consectetur. Exercitation non deserunt voluptate laboris labore ut et tempor. Ut fugiat magna sint labore ullamco officia cillum.Labore amet aute quis enim ad tempor occaecat tempor. Eu irure consequat magna incididunt qui deserunt ut eu excepteur aute. Ullamco dolor incididunt non eiusmod. Sunt do incididunt sunt ea ullamco consequat.Nisi elit ea aliqua magna veniam tempor nulla nulla fugiat. Minim irure ullamco proident mollit nostrud ipsum sint qui. Sit nostrud pariatur anim aute tempor laboris sint aliquip nostrud. Occaecat ex id ad fugiat tempor nisi ad ullamco consectetur adipisicing ut tempor aliquip nisi. Nulla mollit veniam dolor nostrud elit cupidatat aliqua consectetur occaecat et laborum. Do laboris fugiat aliqua aliquip velit.Adipisicing sunt sint irure adipisicing incididunt occaecat deserunt excepteur. Nostrud laborum in enim dolor magna ipsum id amet in laborum ad cupidatat enim. Proident pariatur velit laborum incididunt ullamco excepteur. Ad aute deserunt tempor enim et.</p>
+            </aside>
+            <img src="images/pic1.jpg">
+            <aside>
+                <p>Ea voluptate minim qui incididunt dolor quis sit consectetur. Exercitation non deserunt voluptate laboris labore ut et tempor. Ut fugiat magna sint labore ullamco officia cillum.Labore amet aute quis enim ad tempor occaecat tempor. Eu irure consequat magna incididunt qui deserunt ut eu excepteur aute. Ullamco dolor incididunt non eiusmod. Sunt do incididunt sunt ea ullamco consequat.Nisi elit ea aliqua magna veniam tempor nulla nulla fugiat. Minim irure ullamco proident mollit nostrud ipsum sint qui. Sit nostrud pariatur anim aute tempor laboris sint aliquip nostrud. Occaecat ex id ad fugiat tempor nisi ad ullamco consectetur adipisicing ut tempor aliquip nisi. Nulla mollit veniam dolor nostrud elit cupidatat aliqua consectetur occaecat et laborum. Do laboris fugiat aliqua aliquip velit.Adipisicing sunt sint irure adipisicing incididunt occaecat deserunt excepteur. Nostrud laborum in enim dolor magna ipsum id amet in laborum ad cupidatat enim. Proident pariatur velit laborum incididunt ullamco excepteur. Ad aute deserunt tempor enim et.</p>
+            </aside>
+        </section>
+        <section class="Er" id="innovations">
+            <img src="images/pic1.jpg">
+            <aside>
+                <p>Ea voluptate minim qui incididunt dolor quis sit consectetur. Exercitation non deserunt voluptate laboris labore ut et tempor. Ut fugiat magna sint labore ullamco officia cillum.Labore amet aute quis enim ad tempor occaecat tempor. Eu irure consequat magna incididunt qui deserunt ut eu excepteur aute. Ullamco dolor incididunt non eiusmod. Sunt do incididunt sunt ea ullamco consequat.Nisi elit ea aliqua magna veniam tempor nulla nulla fugiat. Minim irure ullamco proident mollit nostrud ipsum sint qui. Sit nostrud pariatur anim aute tempor laboris sint aliquip nostrud. Occaecat ex id ad fugiat tempor nisi ad ullamco consectetur adipisicing ut tempor aliquip nisi. Nulla mollit veniam dolor nostrud elit cupidatat aliqua consectetur occaecat et laborum. Do laboris fugiat aliqua aliquip velit.Adipisicing sunt sint irure adipisicing incididunt occaecat deserunt excepteur. Nostrud laborum in enim dolor magna ipsum id amet in laborum ad cupidatat enim. Proident pariatur velit laborum incididunt ullamco excepteur. Ad aute deserunt tempor enim et.</p>
+            </aside>
+
+            <img src="images/pic1.jpg">
+            <aside>
+                <p>Ea voluptate minim qui incididunt dolor quis sit consectetur. Exercitation non deserunt voluptate laboris labore ut et tempor. Ut fugiat magna sint labore ullamco officia cillum.Labore amet aute quis enim ad tempor occaecat tempor. Eu irure consequat magna incididunt qui deserunt ut eu excepteur aute. Ullamco dolor incididunt non eiusmod. Sunt do incididunt sunt ea ullamco consequat.Nisi elit ea aliqua magna veniam tempor nulla nulla fugiat. Minim irure ullamco proident mollit nostrud ipsum sint qui. Sit nostrud pariatur anim aute tempor laboris sint aliquip nostrud. Occaecat ex id ad fugiat tempor nisi ad ullamco consectetur adipisicing ut tempor aliquip nisi. Nulla mollit veniam dolor nostrud elit cupidatat aliqua consectetur occaecat et laborum. Do laboris fugiat aliqua aliquip velit.Adipisicing sunt sint irure adipisicing incididunt occaecat deserunt excepteur. Nostrud laborum in enim dolor magna ipsum id amet in laborum ad cupidatat enim. Proident pariatur velit laborum incididunt ullamco excepteur. Ad aute deserunt tempor enim et.</p>
+            </aside>
+            <img src="images/pic1.jpg">
+            <aside>
+                <p>Ea voluptate minim qui incididunt dolor quis sit consectetur. Exercitation non deserunt voluptate laboris labore ut et tempor. Ut fugiat magna sint labore ullamco officia cillum.Labore amet aute quis enim ad tempor occaecat tempor. Eu irure consequat magna incididunt qui deserunt ut eu excepteur aute. Ullamco dolor incididunt non eiusmod. Sunt do incididunt sunt ea ullamco consequat.Nisi elit ea aliqua magna veniam tempor nulla nulla fugiat. Minim irure ullamco proident mollit nostrud ipsum sint qui. Sit nostrud pariatur anim aute tempor laboris sint aliquip nostrud. Occaecat ex id ad fugiat tempor nisi ad ullamco consectetur adipisicing ut tempor aliquip nisi. Nulla mollit veniam dolor nostrud elit cupidatat aliqua consectetur occaecat et laborum. Do laboris fugiat aliqua aliquip velit.Adipisicing sunt sint irure adipisicing incididunt occaecat deserunt excepteur. Nostrud laborum in enim dolor magna ipsum id amet in laborum ad cupidatat enim. Proident pariatur velit laborum incididunt ullamco excepteur. Ad aute deserunt tempor enim et.</p>
+            </aside>
+        </section>
+        <section class="Er" id="implementations">
+            <img src="images/pic1.jpg">
+            <aside>
+                <p>Ea voluptate minim qui incididunt dolor quis sit consectetur. Exercitation non deserunt voluptate laboris labore ut et tempor. Ut fugiat magna sint labore ullamco officia cillum.Labore amet aute quis enim ad tempor occaecat tempor. Eu irure consequat magna incididunt qui deserunt ut eu excepteur aute. Ullamco dolor incididunt non eiusmod. Sunt do incididunt sunt ea ullamco consequat.Nisi elit ea aliqua magna veniam tempor nulla nulla fugiat. Minim irure ullamco proident mollit nostrud ipsum sint qui. Sit nostrud pariatur anim aute tempor laboris sint aliquip nostrud. Occaecat ex id ad fugiat tempor nisi ad ullamco consectetur adipisicing ut tempor aliquip nisi. Nulla mollit veniam dolor nostrud elit cupidatat aliqua consectetur occaecat et laborum. Do laboris fugiat aliqua aliquip velit.Adipisicing sunt sint irure adipisicing incididunt occaecat deserunt excepteur. Nostrud laborum in enim dolor magna ipsum id amet in laborum ad cupidatat enim. Proident pariatur velit laborum incididunt ullamco excepteur. Ad aute deserunt tempor enim et.</p>
+            </aside>
+
+            <img src="images/pic1.jpg">
+            <aside>
+                <p>Ea voluptate minim qui incididunt dolor quis sit consectetur. Exercitation non deserunt voluptate laboris labore ut et tempor. Ut fugiat magna sint labore ullamco officia cillum.Labore amet aute quis enim ad tempor occaecat tempor. Eu irure consequat magna incididunt qui deserunt ut eu excepteur aute. Ullamco dolor incididunt non eiusmod. Sunt do incididunt sunt ea ullamco consequat.Nisi elit ea aliqua magna veniam tempor nulla nulla fugiat. Minim irure ullamco proident mollit nostrud ipsum sint qui. Sit nostrud pariatur anim aute tempor laboris sint aliquip nostrud. Occaecat ex id ad fugiat tempor nisi ad ullamco consectetur adipisicing ut tempor aliquip nisi. Nulla mollit veniam dolor nostrud elit cupidatat aliqua consectetur occaecat et laborum. Do laboris fugiat aliqua aliquip velit.Adipisicing sunt sint irure adipisicing incididunt occaecat deserunt excepteur. Nostrud laborum in enim dolor magna ipsum id amet in laborum ad cupidatat enim. Proident pariatur velit laborum incididunt ullamco excepteur. Ad aute deserunt tempor enim et.</p>
+            </aside>
+            <img src="images/pic1.jpg">
+            <aside>
+                <p>Ea voluptate minim qui incididunt dolor quis sit consectetur. Exercitation non deserunt voluptate laboris labore ut et tempor. Ut fugiat magna sint labore ullamco officia cillum.Labore amet aute quis enim ad tempor occaecat tempor. Eu irure consequat magna incididunt qui deserunt ut eu excepteur aute. Ullamco dolor incididunt non eiusmod. Sunt do incididunt sunt ea ullamco consequat.Nisi elit ea aliqua magna veniam tempor nulla nulla fugiat. Minim irure ullamco proident mollit nostrud ipsum sint qui. Sit nostrud pariatur anim aute tempor laboris sint aliquip nostrud. Occaecat ex id ad fugiat tempor nisi ad ullamco consectetur adipisicing ut tempor aliquip nisi. Nulla mollit veniam dolor nostrud elit cupidatat aliqua consectetur occaecat et laborum. Do laboris fugiat aliqua aliquip velit.Adipisicing sunt sint irure adipisicing incididunt occaecat deserunt excepteur. Nostrud laborum in enim dolor magna ipsum id amet in laborum ad cupidatat enim. Proident pariatur velit laborum incididunt ullamco excepteur. Ad aute deserunt tempor enim et.</p>
+            </aside>
+        </section>
+    </body>
+</html>
