@@ -64,8 +64,10 @@ img{
     }
     #datetime{
         font-size:medium;
+        right:10%;
     }
     #lang{
+        font-size:10px;
         top:-50px;
     }
     #search-bar a{
