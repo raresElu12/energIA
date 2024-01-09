@@ -13,16 +13,7 @@ h1,h2{
 h2{
     font-size:14pt;
 }
-nav{
-    height:50px;
-    border-top:solid 1px gray;
-    border-bottom:solid 1px gray;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:20px;
-}
+
 
 a{
     text-decoration:none;
@@ -42,11 +33,12 @@ a::after{
 }
 #full-container{
     max-width:60.25rem;
+    font-size:16pt;
     margin:auto;
 }
 #first-container{
     display:grid;
-    grid-template-columns:repeat(2,0.3fr);
+    grid-template-columns:repeat(3,0.3fr);
     grid-template-rows:repeat(1,0.3fr);
     gap:50px;
     text-align:justify;
@@ -66,13 +58,14 @@ a::after{
 #second-container .container{
     max-width:fit-content;
     display:inline-flex;
-    flex-direction:row-reverse;
+    flex-direction:row;
     gap:20px;
     padding:15px;
 }
 .container{
     border-bottom:solid 1px black;
-    transition: 1s color
+    transition: 1s color;
+    height: fit-content;
 }
 .container:hover{
     color:rgba(132, 136, 129, 0.894);
@@ -80,4 +73,28 @@ a::after{
 
 #full-container h1{
     text-align:start;
+}
+
+#lang a:hover{
+    color:black;
+}
+#lang{
+    position:relative;
+    bottom:50px;
+}
+
+#datetime{
+    position:relative;
+    text-align:end;
+    right:5%;
+    top:-30px;
+}
+footer{
+    background-color:rgb(241, 232, 232);
+    border:1px solid black;
+    top:30px;
+}
+.article:hover{
+    text-decoration:none;
+    color:black;
 }
