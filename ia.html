@@ -8,6 +8,7 @@
         <title>EnergIA</title>
         <link href="styleia.css" rel="stylesheet" >
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="main.js"></script>
     </head>
     <body>
         <header>
@@ -18,18 +19,13 @@
             <p id="datetime"></p>
         </nav>
         </header>
-        <script>function time(){
-            date = new Date();
-            document.getElementById("datetime").innerHTML = date.toLocaleTimeString("fr-fr");
-
-        } setInterval(time,1000);</script>
         <hr>
         <br><br>
         <h2>Dernières Actualités</h2>
-        <div id="first-arrow"></div>
-        <div id="second-arrow"></div>
+        <div id="first-arrow" onclick="carousel(0)"></div>
+        <div id="second-arrow" onclick="carousel(1)"></div>
         <div id="body-container">
-        <div class="full-article-container">
+        <div class="full-article-container 1">
         <a href="https://www.actuia.com/contribution/yann-mahieu/lintelligence-artificielle-au-coeur-de-la-transformation-durable-des-batiments/" target="_blank">
             <div class="article-box">
                 <img src="https://www.actuia.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2023/07/intelligence-artificielle-transformation-durable-batiments-696x348.png.webp">
@@ -37,7 +33,7 @@
                 <p>L’intelligence artificielle au cœur de la transformation durable des bâtiments</p>
             </div></a>
         </div>
-        <div class="full-article-container">
+        <div class="full-article-container 1">
                 <a href="https://www.actuia.com/actualite/la-region-ile-de-france-et-rte-lancent-le-challenge-ia-pour-la-transition-energetique/" target="_blank">
                 <div class="article-box">
                     <img src="https://www.actuia.com/wp-content/uploads/2023/05/Un-challenge-IA-pour-la-transition-energetique-Region-Ile-de-France-et-RTE-696x348.png">
@@ -45,7 +41,7 @@
                     <p>La Région Ile-de-France et RTE lancent le « Challenge IA pour la Transition Energétique »</p>
                 </div></a>
         </div>
-        <div class="full-article-container">
+        <div class="full-article-container 1">
                 <a href="https://www.construction21.org/france/articles/h/comment-utiliser-l-intelligence-artificielle-dans-la-gestion-de-l-energie.html" target="_blank">
                 <div class="article-box">
                     <img src="https://www.construction21.org/france/data/sources/users/13394/20220921083328-the-use-of-artificial-intelligence-in-energy-management.jpg">
@@ -54,7 +50,7 @@
                 </div>
                 </a>
         </div>
-        <div class="full-article-container">
+        <div class="full-article-container 2">
                 <a href="https://neovision.fr/intelligence-artificielle-energie/" target="_blank">
                 <div class="article-box">
                     <img src="https://neovision.fr/wp-content/uploads/2021/04/IA-et-energie.png">
@@ -63,7 +59,7 @@
                 </div>
                 </a>
         </div>
-        <div class="full-article-container">
+        <div class="full-article-container 2">
                 <a target="_blank" href="https://www.insis.cnrs.fr/fr/cnrsinfo/une-intelligence-artificielle-faible-consommation-denergie">
                 <div class="article-box">
                     <img src="https://www.insis.cnrs.fr/sites/institut_insis/files/styles/top_left/public/image/image%20machine%20bayesienne%20querlioz.jpg?h=40c1760a&itok=g-w7_eta">
@@ -72,7 +68,7 @@
                 </div>
                 </a>
         </div>
-        <div class="full-article-container">
+        <div class="full-article-container 2">
                 <a target="_blank" href="https://www.westdatafestival.fr/ia-et-energies-renouvelables/">
                 <div class="article-box">
                     <img src="https://www.westdatafestival.fr/wp-content/uploads/2022/11/Energie-3.png">

@@ -53,7 +53,8 @@ br+h2{
     width:fit-content;
 }
 img{
-   width:28em; 
+   width:30em;
+   height:20em; 
 }
 #body-container a{
     display:block;
@@ -69,7 +70,7 @@ img{
     border-width:0 15px 15px 0;
     padding:15px;
     transform:rotate(-45deg);
-    top:25vh;
+    top:20vh;
     z-index: 1;
     left:94vw;
 }
@@ -80,8 +81,10 @@ img{
     border-width:0 15px 15px 0;
     padding:15px;
     transform:rotate(135deg);
-    top:25vh;
+    top:20vh;
     right:2vw;
     z-index:1;
     
 }
+
+
