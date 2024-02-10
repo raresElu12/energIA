@@ -81,7 +81,7 @@
                 try{
                     const response = await fetch(`https://almond-understood-makeup.glitch.me/getViewCount/${linkId}`)
                     const data = await response.json();
-                const viewCountElement = document.getElementById(`viewCount${linkId.slice(linkId.length-2,linkId.length-1)}`);
+                const viewCountElement = document.getElementById(`viewCount${linkId.slice(linkId.length-1,linkId.length)}`);
                 viewCountElement.textContent = `Total Views: ${data.count}`;
             } catch (error) {
                 console.error(`Error fetching view count for ${linkId}:`, error);
