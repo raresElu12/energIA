@@ -88,5 +88,22 @@
         La license précédente s'applique seulement au code source de la page web, toutes les photos utilisées sur ce site web ne m'appartiennent pas. Ces photos ont été créées par l'intelligence artificielle de Bing appelée BingIA.
     </footer>
     <br><br><br><br><br><br><br>
+
+    <a href="#" id="link">Click me!</a>
+
+    <script>
+        document.getElementById("link").addEventListener("click", function(event) {
+            // Prevent the default behavior of the link
+        
+            
+            // Send POST request to the server
+            fetch("https://almond-understood-makeup.glitch.me/incrementView", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+        });
+    </script>
     </body>
 </html>
