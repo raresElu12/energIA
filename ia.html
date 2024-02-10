@@ -9,23 +9,6 @@
         <link href="styleia.css" rel="stylesheet" >
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="main.js"></script>
-        <script src="sql.js/dist/sql-wasm.js">
-            config = {
-                locateFile: filename => `/dist/${filename}`;
-            }
-            initSqlJs(config).then(function(SQL){
-                const db = new SQL.Database();
-                db.run("CREATE TABLE test (col1, col2);");
-                db.run("INSERT INTO test VALUES(?,?), (?,?)", [1,111,2,222]);
-
-                const stmt = db.prepare("SELECT * FROM test WHERE col1 BETWEEN $start and $end");
-                stmt.getAsObject({$start:1,$end:2});
-                while(stmt.step()){
-                    const row= stmt.getAsObject();
-                    console.log('Here is a row: ' + JSON.stringify(row));
-                }
-            });
-        </script>
     </head>
     <body>
         <header>
@@ -39,98 +22,61 @@
         <hr>
         <br><br>
         <h2>Dernières Actualités</h2>
-        <div id="first-arrow" onclick="carousel(0)"></div>
-        <div id="second-arrow" onclick="carousel(1)"></div>
         <div id="body-container">
-        <div class="full-article-container 1">
-        <a href="https://www.actuia.com/contribution/yann-mahieu/lintelligence-artificielle-au-coeur-de-la-transformation-durable-des-batiments/" target="_blank">
-            <div class="article-box">
-                <img src="https://www.actuia.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2023/07/intelligence-artificielle-transformation-durable-batiments-696x348.png.webp">
-                <br><br><br>
-                <p>L’intelligence artificielle au cœur de la transformation durable des bâtiments</p>
-            </div></a>
-        </div>
-        <div class="full-article-container 1">
-                <a href="https://www.actuia.com/actualite/la-region-ile-de-france-et-rte-lancent-le-challenge-ia-pour-la-transition-energetique/" target="_blank">
-                <div class="article-box">
-                    <img src="https://www.actuia.com/wp-content/uploads/2023/05/Un-challenge-IA-pour-la-transition-energetique-Region-Ile-de-France-et-RTE-696x348.png">
-                    <br><br><br>
-                    <p>La Région Ile-de-France et RTE lancent le « Challenge IA pour la Transition Energétique »</p>
-                </div></a>
-        </div>
-        <div class="full-article-container 1">
-                <a href="https://www.construction21.org/france/articles/h/comment-utiliser-l-intelligence-artificielle-dans-la-gestion-de-l-energie.html" target="_blank">
-                <div class="article-box">
-                    <img src="https://www.construction21.org/france/data/sources/users/13394/20220921083328-the-use-of-artificial-intelligence-in-energy-management.jpg">
-                    <br><br><br>
-                    <p>Comment utiliser l’Intelligence Artificielle dans la Gestion de l’Énergie</p>
-                </div>
+            <div class="full-article-container" id="1">
+                <a href="articles/art-1.html" target="_blank">
+                    <div class="article-box">
+                        <img src="photos/art-1.jpg">
+                        <br><br><br>
+                        <p>L'Intelligence Artificielle : Pilier de la Métamorphose Durable des Bâtiments</p>
+                    </div>
                 </a>
-        </div>
-        <div class="full-article-container 2">
-                <a href="https://neovision.fr/intelligence-artificielle-energie/" target="_blank">
-                <div class="article-box">
-                    <img src="https://neovision.fr/wp-content/uploads/2021/04/IA-et-energie.png">
-                    <br><br><br>
-                    <p>L’Intelligence Artificielle dans le Domaine de L’Énergie</p>
-                </div>
+                <a href="articles/art-2.html" target="_blank">
+                    <div class="article-box" id="img">
+                        <img src="photos/art-2.jpg">
+                        <br><br><br>
+                        <p>L'IA, Gardienne des Énergies Vertes : Une Odyssée vers la Durabilité</p>
+                    </div>
                 </a>
-        </div>
-        <div class="full-article-container 2">
-                <a target="_blank" href="https://www.insis.cnrs.fr/fr/cnrsinfo/une-intelligence-artificielle-faible-consommation-denergie">
-                <div class="article-box">
-                    <img src="https://www.insis.cnrs.fr/sites/institut_insis/files/styles/top_left/public/image/image%20machine%20bayesienne%20querlioz.jpg?h=40c1760a&itok=g-w7_eta">
-                    <br><br><br>
-                    <p>Une intelligence artificielle à faible consommation d'énergie</p>
-                </div>
-                </a>
-        </div>
-        <div class="full-article-container 2">
-                <a target="_blank" href="https://www.westdatafestival.fr/ia-et-energies-renouvelables/">
-                <div class="article-box">
-                    <img src="https://www.westdatafestival.fr/wp-content/uploads/2022/11/Energie-3.png">
-                    <br><br><br>
-                    <p>IA et énergies renouvelables – Février 2023</p>
-                </div>
-                </a>
-        </div>
-        </div>
-        <!--
-        <br><br><br>
-        <div id="second-container">
-            <a class="article" target="_blank" href="https://www.phoenixcontact.com/fr-lu/industries/mint">
-            <div class="container">
-                <div class="image"><img src="https://dam-mdc.phoenixcontact.com/rendition/156443151564/a999a78f5f321741bc4d657734274f19/-FJPG-B600"></div>
-                <div class="image-title">MINT optimise l’utilisation et la production de votre énergie</div>
+                    <a href="articles/art-3.html" target="_blank">
+                        <div class="article-box">
+                            <img src="photos/art-3.jpg">
+                            <br><br><br>
+                            <p>IA & Énergies Renouvelables : Un Duo Envoûtant pour un Avenir Durable</p>
+                        </div>
+                    </a>
             </div>
-            </a>
-            <a class="article" target="_blank" href="https://www.usinenouvelle.com/editorial/l-ia-traque-l-energie-perdue-des-process-industriels.N2053537">
-            <div class="container">
-                <div class="image"><img src="https://www.usinenouvelle.com/mediatheque/7/0/7/001390707_896x598_c.jpg"></div>
-                <div class="image-title">L'IA traque l'énergie perdue des process industriels</div>
+            <div class="full-article-container" id="2">
+                    <a href="articles/art-4.html" target="_blank">
+                        <div class="article-box">
+                            <img src="photos/art-4.jpg">
+                            <br><br><br>
+                            <p>L'IA en Lumière : Révélations sur son Rôle Crucial dans la Révolution Énergétique</p>
+                        </div>
+                    </a>
+                    <a target="_blank" href="articles/art-5.html">
+                        <div class="article-box">
+                            <img src="photos/art-5.jpg">
+                            <br><br><br>
+                            <p>IA & Énergies Renouvelables : Une Équation pour l'Avenir</p>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://www.westdatafestival.fr/ia-et-energies-renouvelables/">
+                        <div class="article-box">
+                            <img src="photos/art-6.jpg">
+                            <br><br><br>
+                            <p>IA et énergies renouvelables – Février 2023</p>
+                        </div>
+                    </a>
             </div>
-            </a>
-            <a class="article" target="_blank" href="https://am.pictet/fr/terredepargne/articles/investissement-responsable/intelligence-artificielle-et-energies-renouvelables-l-avenir-de-notre-planete">
-            <div class="container">
-                <div class="image"><img src="https://am.pictet/-/media/pam/pam-common-gallery/heroes/fullbleed/pictet-per-te/sustainability/airinnovabili_heroes_getty_hfarm_201904.jpg"></div>
-                <div class="image-title">IA et énergies renouvelables: l’avenir de notre planète</div>
-            </div>
-            </a>
-            <a class="article" target="_blank" href="https://www.larevolutiontextile.com/energie-lintelligence-artificielle-va-t-elle-permettre-doptimiser-la-production-et-la-distribution-denergie/">
-            <div class="container">
-                <div class="image"><img src="https://www.larevolutiontextile.com/wp-content/uploads/2023/09/Intelligence-artificielle.jpg.webp"></div>
-                <div class="image-title">Energie : L’intelligence artificielle va-t-elle permettre d’optimiser la production et la distribution d’énergie ?</div>
-            </div>
-            </a>
-            <a class="article" target="_blank" href="https://www.euractiv.fr/section/politique/news/intelligenter-strom-durch-eu-strukturmittel/">
-            <div class="container">
-                <div class="image"><img src="https://www.euractiv.fr/wp-content/uploads/sites/3/2020/09/w_55569821-800x450.jpg"></div>
-                <div class="image-title">Intelligence artificielle et énergies renouvelables : un couple durable ?</div>
-            </a>
-        </div>-->
+        </div>
+        <br><br><br><br>
+        <div id="carousel-points">
+            <div id="point-1" onclick="back()"></div>
+            <div id="point-2" onclick="test()"></div>
         </div>
     <footer>
-        Ce projet a été réalisé par trois éléves de terminale pendant le cours d'enseignement scientifique, dans le but d'informer le public et mettre en avant les progrès faits par les Intelligences Artificielles ces derniers temps. Pour nous contacter et nous donner votre avis sur le site ou si vous êtes le véritable propriétaire d'une des photos exposées et que vous souhaitez que nous l'enlevions ou bien vous donner plus de crédits,  nous disposons d'une adresse, qui s'adresse à ces deux cas en particulier, l'adresse est : energia.feedback@gmail.com
+        Ce projet a été réalisé par trois éléves de terminale pendant le cours d'enseignement scientifique, dans le but d'informer le public et mettre en avant les progrès faits par les Intelligences Artificielles ces derniers temps. Pour nous contacter et nous donner votre avis sur le site nous disposons d'une adresse, qui s'adresse à ces deux cas en particulier, l'adresse est : energia.feedback@gmail.com
 
         <br><br><br><br>
         I dedicate any and all copyright interest in this software to the
@@ -139,7 +85,7 @@
         dedication to be an overt act of relinquishment in perpetuity of all
         present and future rights to this software under copyright law.<br><br><br>
 
-        La license précédente s'applique seulement au code source de la page web, toutes les photos utilisées sur ce site web ne m'appartiennent pas. Ces photos appartiennent aux sites qui ont fait les articles en question ou aux propriétaires des photos.
+        La license précédente s'applique seulement au code source de la page web, toutes les photos utilisées sur ce site web ne m'appartiennent pas. Ces photos ont été créées par l'intelligence artificielle de Bing appelée BingIA.
     </footer>
     <br><br><br><br><br><br><br>
     </body>

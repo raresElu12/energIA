@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 *{
     position:relative;
-    max-width:100vw;
     font-family:'Quicksand';
 }
 body{
@@ -39,52 +38,90 @@ footer{
     display:flex;
     flex-direction:row;
     flex-wrap:nowrap;
-    gap:10em;
+    right:30px;
+    gap:100vw;
+    width:400vw;
+    background:linear-gradient(90deg,#78dca7 0%,#69df83 30%, #3e96aa);
+}
+.full-article-container{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
     align-items:center;
-    left:5em;
+    left:12vw;
+    gap:10vw;
+}
+.full-article-container a{
+    text-wrap:balance;
+
+}
+.full-article-container .article-box{
+    width:20vw;
 }
 br+h2{
     font-size:18pt;
     text-align:left;
-    box-shadow:3px 2px 2px #555;
+    border-bottom:3px solid #983409;
     width:fit-content;
-}
-.article-box{
-    width:fit-content;
-}
-img{
-   width:30em;
-   height:20em; 
-}
-#body-container a{
-    display:block;
-    width:fit-content;
-    text-decoration:none;
-    color:black;
 }
 
-#first-arrow{
-    display:inline-block;
-    position:relative;
-    border: solid #797676;
-    border-width:0 15px 15px 0;
-    padding:15px;
-    transform:rotate(-45deg);
-    top:20vh;
-    z-index: 1;
-    left:94vw;
+img{
+    width:13vw;
+    height:auto;
 }
-#second-arrow{
-    display:inline-block;
-    position:relative;
-    border:solid #797676;
-    border-width:0 15px 15px 0;
-    padding:15px;
-    transform:rotate(135deg);
-    top:20vh;
-    right:2vw;
-    z-index:1;
-    
+#carousel-points{
+    display:flex;
+    right:-44vw;
+    gap:45px;
+    font-size:60px;
 }
+#carousel-points div{
+    border-radius:30px;
+    background-color:gray;
+    width:15px;
+    height:15px;
+}
+div#point-1{
+    background-color:#993548;
+}
+.article-box{
+    top:10px;
+}
+a{
+    height:43vh;
+}
+
+.class{
+    animation-duration:2.5s;
+    animation-name:test;
+    animation-fill-mode:forwards;
+}
+.back{
+    animation-duration: 2.5s;
+    animation-name:back;
+    animation-fill-mode:forwards;
+}
+.scaling{
+    animation-name:scaling;
+    animation-duration:1s;
+    animation-iteration-count: infinite;
+}
+@keyframes test{
+    from{
+        right:0;
+    }
+    to{
+        right:182vw;
+    }
+}
+@keyframes back{
+    from{
+        right:182vw;
+    }
+    to{
+        right:0vw;
+    }
+}
+
 
 
