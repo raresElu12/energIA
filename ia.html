@@ -24,50 +24,50 @@
         <h2>Dernières Actualités</h2>
         <div id="body-container">
             <div class="full-article-container" id="1">
-                <a href="articles/art-1.html" target="_blank">
+                <a href="articles/art-1.html" target="_blank" id="link1">
                     <div class="article-box">
                         <img src="photos/art-1.jpg">
                         <br><br><br>
                         <p>L'Intelligence Artificielle : Pilier de la Métamorphose Durable des Bâtiments</p>
                     </div>
-                </a>
-                <a href="articles/art-2.html" target="_blank">
+                </a>- <span id="viewCount1">Loading...</span>
+                <a href="articles/art-2.html" target="_blank" id="link2">
                     <div class="article-box" id="img">
                         <img src="photos/art-2.jpg">
                         <br><br><br>
                         <p>L'IA, Gardienne des Énergies Vertes : Une Odyssée vers la Durabilité</p>
                     </div>
-                </a>
-                    <a href="articles/art-3.html" target="_blank">
+                </a>- <span id="viewCount1">Loading...</span>
+                    <a href="articles/art-3.html" target="_blank" id="link3">
                         <div class="article-box">
                             <img src="photos/art-3.jpg">
                             <br><br><br>
                             <p>IA & Énergies Renouvelables : Un Duo Envoûtant pour un Avenir Durable</p>
                         </div>
-                    </a>
+                    </a>- <span id="viewCount1">Loading...</span>
             </div>
             <div class="full-article-container" id="2">
-                    <a href="articles/art-4.html" target="_blank">
+                    <a href="articles/art-4.html" target="_blank" id="link4">
                         <div class="article-box">
                             <img src="photos/art-4.jpg">
                             <br><br><br>
                             <p>L'IA en Lumière : Révélations sur son Rôle Crucial dans la Révolution Énergétique</p>
                         </div>
-                    </a>
-                    <a target="_blank" href="articles/art-5.html">
+                    </a>- <span id="viewCount1">Loading...</span>
+                    <a target="_blank" href="articles/art-5.html" id="link5">
                         <div class="article-box">
                             <img src="photos/art-5.jpg">
                             <br><br><br>
                             <p>IA & Énergies Renouvelables : Une Équation pour l'Avenir</p>
                         </div>
-                    </a>
+                    </a>- <span id="viewCount1">Loading...</span>
                     <a target="_blank" href="https://www.westdatafestival.fr/ia-et-energies-renouvelables/">
                         <div class="article-box">
-                            <img src="photos/art-6.jpg">
+                            <img src="photos/art-6.jpg" id="link6">
                             <br><br><br>
                             <p>IA et énergies renouvelables – Février 2023</p>
                         </div>
-                    </a>
+                    </a>- <span id="viewCount1">Loading...</span>
             </div>
         </div>
         <br><br><br><br>
@@ -75,6 +75,49 @@
             <div id="point-1" onclick="back()"></div>
             <div id="point-2" onclick="test()"></div>
         </div>
+
+        <script>
+            async function fetchViewCount(linkID){
+                try{
+                    const response = await fetch(`https://almond-understood-makeup.glitch.me/getViewCount/${linkID}`)
+                    const data = await response.json();
+                const viewCountElement = document.getElementById(`viewCount${linkId}`);
+                viewCountElement.textContent = `Total Views: ${data.count}`;
+            } catch (error) {
+                console.error(`Error fetching view count for ${linkId}:`, error);
+            }
+        }
+
+        // Function to increment view count for a specific link
+        async function incrementViewCount(linkId) {
+            try {
+                await fetch(`https://your-glitch-project.glitch.me/incrementView/${linkId}`, {
+                    method: "POST"
+                });
+                fetchViewCount(linkId); // Update view count after incrementing
+            } catch (error) {
+                console.error(`Error incrementing view count for ${linkId}:`, error);
+            }
+        }
+
+        // Attach event listeners to each link to increment view count on click
+        document.getElementById("link1").addEventListener("click", () => incrementViewCount("link1"));
+        document.getElementById("link2").addEventListener("click", () => incrementViewCount("link2"));
+        document.getElementById("link3").addEventListener("click", () => incrementViewCount("link3"));
+        document.getElementById("link4").addEventListener("click", () => incrementViewCount("link4"));
+        document.getElementById("link5").addEventListener("click", () => incrementViewCount("link5"));
+        document.getElementById("link6").addEventListener("click", () => incrementViewCount("link6"));
+
+        // Fetch view counts for all links when the page loads
+        window.onload = () => {
+            fetchViewCount("link1");
+            fetchViewCount("link2");
+            fetchViewCount("link3");
+            fetchViewCount("link4");
+            fetchViewCount("link5");
+            fetchViewCount("link6");
+        };
+    </script>
     <footer>
         Ce projet a été réalisé par trois éléves de terminale pendant le cours d'enseignement scientifique, dans le but d'informer le public et mettre en avant les progrès faits par les Intelligences Artificielles ces derniers temps. Pour nous contacter et nous donner votre avis sur le site nous disposons d'une adresse, qui s'adresse à ces deux cas en particulier, l'adresse est : energia.feedback@gmail.com
 
@@ -88,22 +131,5 @@
         La license précédente s'applique seulement au code source de la page web, toutes les photos utilisées sur ce site web ne m'appartiennent pas. Ces photos ont été créées par l'intelligence artificielle de Bing appelée BingIA.
     </footer>
     <br><br><br><br><br><br><br>
-
-    <a href="#" id="link">Click me!</a>
-
-    <script>
-        document.getElementById("link").addEventListener("click", function(event) {
-            // Prevent the default behavior of the link
-        
-            
-            // Send POST request to the server
-            fetch("https://almond-understood-makeup.glitch.me/incrementView", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            });
-        });
-    </script>
     </body>
 </html>
