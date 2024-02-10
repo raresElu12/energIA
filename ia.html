@@ -79,7 +79,7 @@
         <script>
             async function fetchViewCount(linkId){
                 try{
-                    const response = await fetch(`https://almond-understood-makeup.glitch.me/getViewCount/${linkID}`)
+                    const response = await fetch(`https://almond-understood-makeup.glitch.me/getViewCount/${linkId}`)
                     const data = await response.json();
                 const viewCountElement = document.getElementById(`viewCount${linkId}`);
                 viewCountElement.textContent = `Total Views: ${data.count}`;
