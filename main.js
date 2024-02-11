@@ -45,7 +45,7 @@ async function fetchViewCounts(num_art){
 function renderPopularNews(num_art){
     let a = document.body.innerHTML;
     F = []
-    listeArticles = fetchViewCounts(num_art).then(res => F.push(res), err => console.error(err));
+    listeArticles = fetchViewCounts(num_art).then(res => res, err => console.error(err)).then(res => F.push(res), err => console.error(err));
     F = F[0]
     
     b = a.substring(0,a.length-1121);
