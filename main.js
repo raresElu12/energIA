@@ -34,7 +34,7 @@ document.getElementById("link6").addEventListener("click", () => incrementViewCo
 
 
 async function fetchViewCounts(num_art){
-    let list = []
+    let list = [];
     for(let i = 1;i<num_art+1;i++){
 
     try { 
@@ -44,7 +44,8 @@ async function fetchViewCounts(num_art){
         console.error(error);
     }
 }
-    return list.sort((a,b) => b['viewCount'] - a['viewCount'])
+    list.sort((a,b) => b['viewCount'] - a['viewCount']);
+    return list;
 }
 
 function renderPopularNews(num_art){
