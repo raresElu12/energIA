@@ -58,7 +58,7 @@ function renderPopularNews(num_art){
         <div class="full-article-container">\n`;  
     for (let i =1;i<num_art/2;i++){
         b+= `<a href="articles/art-${listeArticles[i-1]['article']}" target="_blank" id="link${6+listeArticles[i-1]['article']}">\n
-        <div class="article-box">\n<img src="photos/art-${listeArticles[i-1]['article']}.jpg">\n<br><br><br>\n<p>${document.getElementById(`titre-art-${listeArticles[i-1]}`)}</p>\n</div>\n</a>`;
+        <div class="article-box">\n<img src="photos/art-${listeArticles[i-1]['article']}.jpg">\n<br><br><br>\n<p>${document.getElementById(`titre-art-${listeArticles[i-1]['article']}`)}</p>\n</div>\n</a>`;
     }
     b+=`\n<div class="full-article-container">`;
     for(let i = num_art/2; i < num_art;i++){
