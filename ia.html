@@ -30,21 +30,21 @@
                         <br><br><br>
                         <p>L'Intelligence Artificielle : Pilier de la Métamorphose Durable des Bâtiments</p>
                     </div>
-                </a>- <span id="viewCount2">Loading...</span>
+                </a>
                 <a href="articles/art-2.html" target="_blank" id="link2">
                     <div class="article-box" id="img">
                         <img src="photos/art-2.jpg">
                         <br><br><br>
                         <p>L'IA, Gardienne des Énergies Vertes : Une Odyssée vers la Durabilité</p>
                     </div>
-                </a>- <span id="viewCount3">Loading...</span>
+                </a>
                     <a href="articles/art-3.html" target="_blank" id="link3">
                         <div class="article-box">
                             <img src="photos/art-3.jpg">
                             <br><br><br>
                             <p>IA & Énergies Renouvelables : Un Duo Envoûtant pour un Avenir Durable</p>
                         </div>
-                    </a>- <span id="viewCount4">Loading...</span>
+                    </a>
             </div>
             <div class="full-article-container" id="2">
                     <a href="articles/art-4.html" target="_blank" id="link4">
@@ -60,14 +60,14 @@
                             <br><br><br>
                             <p>IA & Énergies Renouvelables : Une Équation pour l'Avenir</p>
                         </div>
-                    </a>- <span id="viewCount6">Loading...</span>
+                    </a>
                     <a target="_blank" href="https://www.westdatafestival.fr/ia-et-energies-renouvelables/">
                         <div class="article-box">
                             <img src="photos/art-6.jpg" id="link6">
                             <br><br><br>
                             <p>IA et énergies renouvelables – Février 2023</p>
                         </div>
-                    </a>- <span id="viewCount1">Loading...</span>
+                    </a>
             </div>
         </div>
         <br><br><br><br>
@@ -76,48 +76,7 @@
             <div id="point-2" onclick="test()"></div>
         </div>
 
-        <script>
-            async function fetchViewCount(linkId){
-                try{
-                    const response = await fetch(`https://almond-understood-makeup.glitch.me/getViewCount/${linkId}`);
-                    const data = await response.json().then(res => res['count'], err => console.error(err));
-                const viewCountElement = document.getElementById(`viewCount${linkId.slice(linkId.length-1,linkId.length)}`);
-                viewCountElement.innerHTML = data;
-            } catch (error) {
-                console.error(`Error fetching view count for ${linkId}:`, error);
-            }
-        }
-
-        // Function to increment view count for a specific link
-        async function incrementViewCount(linkId) {
-            try {
-                await fetch(`https://almond-understood-makeup.glitch.me/incrementView/${linkId}`, {
-                    method: "POST"
-                });
-                fetchViewCount(linkId); // Update view count after incrementing
-            } catch (error) {
-                console.error(`Error incrementing view count for ${linkId}:`, error);
-            }
-        }
-
-        // Attach event listeners to each link to increment view count on click
-        document.getElementById("link1").addEventListener("click", () => incrementViewCount("link1"));
-        document.getElementById("link2").addEventListener("click", () => incrementViewCount("link2"));
-        document.getElementById("link3").addEventListener("click", () => incrementViewCount("link3"));
-        document.getElementById("link4").addEventListener("click", () => incrementViewCount("link4"));
-        document.getElementById("link5").addEventListener("click", () => incrementViewCount("link5"));
-        document.getElementById("link6").addEventListener("click", () => incrementViewCount("link6"));
-
-        // Fetch view counts for all links when the page loads
-        window.onload = () => {
-            fetchViewCount('link1');
-            fetchViewCount('link2');
-            fetchViewCount('link3');
-            fetchViewCount('link4');
-            fetchViewCount('link5');
-            fetchViewCount('link6');
-        };
-    </script>
+    
     <footer>
         Ce projet a été réalisé par trois éléves de terminale pendant le cours d'enseignement scientifique, dans le but d'informer le public et mettre en avant les progrès faits par les Intelligences Artificielles ces derniers temps. Pour nous contacter et nous donner votre avis sur le site nous disposons d'une adresse, qui s'adresse à ces deux cas en particulier, l'adresse est : energia.feedback@gmail.com
 
