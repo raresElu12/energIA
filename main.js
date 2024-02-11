@@ -4,15 +4,15 @@ function time(){
 
 } setInterval(time,1000);
 
-function test(){
-    document.getElementById("body-container").className='class';
-    document.getElementById("point-2").style.backgroundColor = '#993548';
-    document.getElementById("point-1").style.backgroundColor="gray";
+function test(id,idb=''){
+    document.getElementById(`body-container${idb}`).className='class';
+    document.getElementById(`point-${id}`).style.backgroundColor = '#993548';
+    document.getElementById(`point-${id}`).style.backgroundColor="gray";
 }
-function back(){
-    document.getElementById("body-container").className='back';
-    document.getElementById("point-1").style.backgroundColor='#993548';
-    document.getElementById("point-2").style.backgroundColor="gray";
+function back(id,idb=''){
+    document.getElementById(`body-container${idb}`).className='back';
+    document.getElementById(`point-${id}`).style.backgroundColor='#993548';
+    document.getElementById(`point-${id}`).style.backgroundColor="gray";
 }
 async function incrementViewCount(linkId) {
     try {
@@ -31,9 +31,6 @@ document.getElementById("link3").addEventListener("click", () => incrementViewCo
 document.getElementById("link4").addEventListener("click", () => incrementViewCount("link4"));
 document.getElementById("link5").addEventListener("click", () => incrementViewCount("link5"));
 document.getElementById("link6").addEventListener("click", () => incrementViewCount("link6"));
-
-
-
 
 
 async function fetchViewCounts(num_art){
@@ -68,6 +65,20 @@ function renderPopularNews(num_art){
         <div class="article-box">\n<img src="photos/art-${listeArticles[i-1]}.jpg">\n<br><br><br>\n<p>${document.getElementById(`titre-art-${listeArticles[i-1]}`)}</p>\n</div>\n</a>`;
     }
     b+=`\n</div>\n</div>\n<br><br><br><br>`;
+
+    b+=` <div class="carousel-points">\n
+    <div id="point-3" onclick="back()"></div>
+    <div id="point-4" onclick="test()"></div>
+</div>`;
+
+    a = b + ` \n    <footer>\n        Ce projet a été réalisé par trois éléves de terminale pendant le cours d'enseignement scientifique, dans le but d'informer le public et mettre en avant les progrès faits par les Intelligences Artificielles ces derniers temps. Pour nous contacter et nous donner votre avis sur le site nous disposons d'une adresse, qui s'adresse à ces deux cas en particulier, l'adresse est : energia.feedback@gmail.com\n\n        <br><br><br><br>\n        I dedicate any and all copyright interest in this software to the\n        public domain. I make this dedication for the benefit of the public at\n        large and to the detriment of my heirs and successors. I intend this\n        dedication to be an overt act of relinquishment in perpetuity of all\n        present and future rights to this software under copyright law.<br><br><br>\n\n        La license précédente s'applique seulement au code source de la page web, toutes les photos utilisées sur ce site web ne m'appartiennent pas. Ces photos ont été créées par l'intelligence artificielle de Bing appelée BingIA.\n    </footer>\n    <br><br><br><br><br><br><br>\n    \n`;
 }
 
 renderPopularNews(6);
+
+document.getElementById("link7").addEventListener("click", () => incrementViewCount("link1"));
+document.getElementById("link8").addEventListener("click", () => incrementViewCount("link2"));
+document.getElementById("link9").addEventListener("click", () => incrementViewCount("link3"));
+document.getElementById("link10").addEventListener("click", () => incrementViewCount("link4"));
+document.getElementById("link11").addEventListener("click", () => incrementViewCount("link5"));
+document.getElementById("link12").addEventListener("click", () => incrementViewCount("link6"));
