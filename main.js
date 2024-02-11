@@ -25,12 +25,6 @@ async function incrementViewCount(linkId) {
 }
 
 // Attach event listeners to each link to increment view count on click
-document.getElementById("link1").addEventListener("click", () => incrementViewCount("link1"));
-document.getElementById("link2").addEventListener("click", () => incrementViewCount("link2"));
-document.getElementById("link3").addEventListener("click", () => incrementViewCount("link3"));
-document.getElementById("link4").addEventListener("click", () => incrementViewCount("link4"));
-document.getElementById("link5").addEventListener("click", () => incrementViewCount("link5"));
-document.getElementById("link6").addEventListener("click", () => incrementViewCount("link6"));
 
 
 async function fetchViewCounts(num_art){
@@ -77,6 +71,12 @@ function renderPopularNews(num_art){
 
 renderPopularNews(6);
 
+document.getElementById("link1").addEventListener("click", () => incrementViewCount("link1"));
+document.getElementById("link2").addEventListener("click", () => incrementViewCount("link2"));
+document.getElementById("link3").addEventListener("click", () => incrementViewCount("link3"));
+document.getElementById("link4").addEventListener("click", () => incrementViewCount("link4"));
+document.getElementById("link5").addEventListener("click", () => incrementViewCount("link5"));
+document.getElementById("link6").addEventListener("click", () => incrementViewCount("link6"));
 document.getElementById("link7").addEventListener("click", () => incrementViewCount("link1"));
 document.getElementById("link8").addEventListener("click", () => incrementViewCount("link2"));
 document.getElementById("link9").addEventListener("click", () => incrementViewCount("link3"));
