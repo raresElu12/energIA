@@ -48,7 +48,7 @@ async function renderPopularNews(num_art){
     await fetchViewCounts(num_art).then(res => F.push(res), err => console.error(err))
     F = F[0]
     
-    b = a.substring(0,a.length-1121);
+    b = a.substring(0,a.length-1136);
     b += `<br><br><br><br><br><br>\n
     <h2>Nouvelles Populaires</h2>\n
     <div id="body-container-2">\n
