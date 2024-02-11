@@ -90,7 +90,12 @@ div#point-1{
     top:10px;
 }
 a{
-    
+    color:#749bc2;
+    background-color:#f6f4eb;
+}
+a:hover{
+    background-color:#749bc2;
+    color:#f6f4eb;
 }
 
 .class{
