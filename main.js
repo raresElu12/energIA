@@ -34,5 +34,4 @@ document.getElementById("link6").addEventListener("click", () => incrementViewCo
 
 function renderPopularNews(){
     let a = document.body.innerHTML;
-    a += 
 }
