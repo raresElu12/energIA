@@ -132,8 +132,8 @@ a p:hover{
     display:flex;
     flex-direction:row;
     flex-wrap:nowrap;
-    right:30px;
     gap:100vw;
+    right:30px;
     width:400vw;
     background:linear-gradient(90deg,#91c8e4 20%,#749bc2 50%, #4682a9);
 

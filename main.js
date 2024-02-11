@@ -48,28 +48,30 @@ async function renderPopularNews(num_art){
     await fetchViewCounts(num_art).then(res => F.push(res), err => console.error(err))
     F = F[0]
     
-    b = a.substring(0,a.length-1161);
+    b = a.substring(0,a.length-1153);
+
     b += `<br><br><br><br><br><br>\n
     <h2>Nouvelles Populaires</h2>\n
     <div id="body-container-2">\n
         <div class="full-article-container">\n`;  
-    for (let i =1;i<num_art/2;i++){
-        b+= `<a href="articles/art-${F[i-1]['article']}" target="_blank" id="link${6+F[i-1]['article']}">\n
-        <div class="article-box">\n<img src="photos/art-${F[i-1]['article']}.jpg">\n<br><br><br>\n<p>${document.getElementById(`titre-art-${F[i-1]['article']}`)}</p>\n</div>\n</a>`;
+    for (let i =1;i<=num_art/2;i++){
+        b+= `<a href="articles/art-${F[i-1]['article']}.html" target="_blank" id="link${6+F[i-1]['article']}">\n
+        <div class="article-box">\n<img src="photos/art-${F[i-1]['article']}.jpg">\n<br><br><br>\n<p>${document.getElementById(`titre-art-${F[i-1]['article']}`).innerText}</p>\n</div>\n</a>`;
     }
-    b+=`\n<div class="full-article-container">`;
-    for(let i = num_art/2; i < num_art;i++){
-        b+= `<a href="articles/art-${F[i-1]['article']}" target="_blank" id="link${6+F[i-1]['article']}">\n
-        <div class="article-box">\n<img src="photos/art-${F[i-1]['article']}.jpg">\n<br><br><br>\n<p>${document.getElementById(`titre-art-${F[i-1]['article']}`)}</p>\n</div>\n</a>`;
+    b+=`</div>\n<div class="full-article-container">`;
+    for(let i = num_art/2+1; i <= num_art;i++){
+        b+= `<a href="articles/art-${F[i-1]['article']}.html" target="_blank" id="link${6+F[i-1]['article']}">\n
+        <div class="article-box">\n<img src="photos/art-${F[i-1]['article']}.jpg">\n<br><br><br>\n<p>${document.getElementById(`titre-art-${F[i-1]['article']}`).innerText}</p>\n</div>\n</a>`;
     }
     b+=`\n</div>\n</div>\n<br><br><br><br>`;
 
-    b+=` <div class="carousel-points">\n
+
+    document.body.innerHTML = b;
+    document.body.innerHTML += ` <div class="carousel-points">\n
     <div id="point-3" onclick="back(3,'-2')"></div>
     <div id="point-4" onclick="test(4,'-2')"></div>
 </div>`;
-
-    document.body.innerHTML = b + ` \n    <footer>\n        Ce projet a été réalisé par trois éléves de terminale pendant le cours d'enseignement scientifique, dans le but d'informer le public et mettre en avant les progrès faits par les Intelligences Artificielles ces derniers temps. Pour nous contacter et nous donner votre avis sur le site nous disposons d'une adresse, qui s'adresse à ces deux cas en particulier, l'adresse est : energia.feedback@gmail.com\n\n        <br><br><br><br>\n        I dedicate any and all copyright interest in this software to the\n        public domain. I make this dedication for the benefit of the public at\n        large and to the detriment of my heirs and successors. I intend this\n        dedication to be an overt act of relinquishment in perpetuity of all\n        present and future rights to this software under copyright law.<br><br><br>\n\n        La license précédente s'applique seulement au code source de la page web, toutes les photos utilisées sur ce site web ne m'appartiennent pas. Ces photos ont été créées par l'intelligence artificielle de Bing appelée BingIA.\n    </footer>\n    <br><br><br><br><br><br><br>\n    \n`;
+    document.body.innerHTML += ` \n\n\n\n<br><br><br><br><br><br>    <footer>\n        Ce projet a été réalisé par trois éléves de terminale pendant le cours d'enseignement scientifique, dans le but d'informer le public et mettre en avant les progrès faits par les Intelligences Artificielles ces derniers temps. Pour nous contacter et nous donner votre avis sur le site nous disposons d'une adresse, qui s'adresse à ces deux cas en particulier, l'adresse est : energia.feedback@gmail.com\n\n        <br><br><br><br>\n        I dedicate any and all copyright interest in this software to the\n        public domain. I make this dedication for the benefit of the public at\n        large and to the detriment of my heirs and successors. I intend this\n        dedication to be an overt act of relinquishment in perpetuity of all\n        present and future rights to this software under copyright law.<br><br><br>\n\n        La license précédente s'applique seulement au code source de la page web, toutes les photos utilisées sur ce site web ne m'appartiennent pas. Ces photos ont été créées par l'intelligence artificielle de Bing appelée BingIA.\n    </footer>\n    <br><br><br><br><br><br><br>\n    \n`;
 }
 
 renderPopularNews(6);
