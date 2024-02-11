@@ -50,7 +50,7 @@ async function fetchViewCounts(num_art){
 
 function renderPopularNews(num_art){
     let a = document.body.innerHTML;
-    listeArticles = fetchViewCounts(num_art);
+    listeArticles = fetchViewCounts(num_art).then(res => [res]);
     b = a.substring(0,a.length-1121);
     b += `<br><br><br><br><br><br>\n
     <h2>Nouvelles Populaires</h2>\n
