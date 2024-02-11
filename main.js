@@ -31,3 +31,8 @@ document.getElementById("link3").addEventListener("click", () => incrementViewCo
 document.getElementById("link4").addEventListener("click", () => incrementViewCount("link4"));
 document.getElementById("link5").addEventListener("click", () => incrementViewCount("link5"));
 document.getElementById("link6").addEventListener("click", () => incrementViewCount("link6"));
+
+function renderPopularNews(){
+    let a = document.body.innerHTML;
+    a += 
+}
