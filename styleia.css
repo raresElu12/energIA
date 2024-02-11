@@ -9,6 +9,7 @@ body{
 }
 h1,h2{
     text-align:center;
+    color:#749bc2;
 }
 h2{
     font-size:14pt;
@@ -28,10 +29,11 @@ h2{
 }
 footer{
     max-width:80vw;
-    background-color:rgb(241, 232, 232);
+    background-color:#4682a9;
     border:1px solid black;
     top:30px;
     margin:auto;
+    color:white;
 }
 
 #body-container{    
