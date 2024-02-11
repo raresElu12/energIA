@@ -85,7 +85,7 @@
                 try{
                     viewCountElement.innerHTML = `Total Views: ${data.then(res => res['count'], err => console.err(err))}`;
                 } catch (error){
-                    console.error('Esti un slab')
+                    console.error(`Esti un slab ${typeof data} ${error}`)
                 }
             } catch (error) {
                 console.error(`Error fetching view count for ${linkId}:`, error);
