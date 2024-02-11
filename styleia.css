@@ -41,7 +41,7 @@ footer{
     right:30px;
     gap:100vw;
     width:400vw;
-    background:linear-gradient(90deg,#78dca7 0%,#69df83 30%, #3e96aa);
+    background:linear-gradient(90deg,#91c8e4 0%,#749bc2 30%, #4682a9);
 }
 .full-article-container{
     display:flex;
@@ -100,11 +100,6 @@ a{
     animation-duration: 2.5s;
     animation-name:back;
     animation-fill-mode:forwards;
-}
-.scaling{
-    animation-name:scaling;
-    animation-duration:1s;
-    animation-iteration-count: infinite;
 }
 @keyframes test{
     from{
