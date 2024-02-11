@@ -90,13 +90,15 @@ div#point-1{
     top:10px;
 }
 a{
-    color:#749bc2;
-    background-color:#f6f4eb;
     text-decoration:none;
 }
-a:hover{
-    background-color:#749bc2;
+a p{
+    color:#749bc2;
+    background-color: #f6f4eb;
+}
+a p:hover{
     color:#f6f4eb;
+    background-color: #749bc2;
 }
 
 .class{
