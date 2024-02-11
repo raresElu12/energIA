@@ -53,13 +53,13 @@ function renderPopularNews(num_art){
     <div id="body-container-2">\n
         <div class="full-article-container">\n`;  
     for (let i =1;i<num_art/2;i++){
-        b+= `<a href="articles/art-${listeArticles[i-1]['article']}" target="_blank" id="link${6+listeArticles[i-1]['article']}">\n
-        <div class="article-box">\n<img src="photos/art-${listeArticles[i-1]['article']}.jpg">\n<br><br><br>\n<p>${document.getElementById(`titre-art-${listeArticles[i-1]['article']}`)}</p>\n</div>\n</a>`;
+        b+= `<a href="articles/art-${F[i-1]['article']}" target="_blank" id="link${6+F[i-1]['article']}">\n
+        <div class="article-box">\n<img src="photos/art-${F[i-1]['article']}.jpg">\n<br><br><br>\n<p>${document.getElementById(`titre-art-${F[i-1]['article']}`)}</p>\n</div>\n</a>`;
     }
     b+=`\n<div class="full-article-container">`;
     for(let i = num_art/2; i < num_art;i++){
-        b+= `<a href="articles/art-${listeArticles[i-1]['article']}" target="_blank" id="link${6+listeArticles[i-1]['article']}">\n
-        <div class="article-box">\n<img src="photos/art-${listeArticles[i-1]['article']}.jpg">\n<br><br><br>\n<p>${document.getElementById(`titre-art-${listeArticles[i-1]['article']}`)}</p>\n</div>\n</a>`;
+        b+= `<a href="articles/art-${F[i-1]['article']}" target="_blank" id="link${6+F[i-1]['article']}">\n
+        <div class="article-box">\n<img src="photos/art-${F[i-1]['article']}.jpg">\n<br><br><br>\n<p>${document.getElementById(`titre-art-${F[i-1]['article']}`)}</p>\n</div>\n</a>`;
     }
     b+=`\n</div>\n</div>\n<br><br><br><br>`;
 
