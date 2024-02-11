@@ -92,6 +92,7 @@ div#point-1{
 a{
     color:#749bc2;
     background-color:#f6f4eb;
+    text-decoration:none;
 }
 a:hover{
     background-color:#749bc2;
