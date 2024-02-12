@@ -99,11 +99,11 @@ a p{
 }
 a p:hover{
     color:#f6f4eb;
-    transition : background-color 1000ms linear;
+    transition : background-color 300ms linear;
     background-color: #749bc2;
 }
 a p{
-    transition:background-color 1000ms linear;
+    transition:background-color 300ms linear;
 }
 
 
