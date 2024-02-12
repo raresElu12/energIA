@@ -141,3 +141,7 @@ a p:hover{
 div#point-3{
     background-color:#993548;
 }
+
+.full-article-container p{
+    border-radius : 14px;
+}
