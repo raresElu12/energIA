@@ -60,6 +60,10 @@ footer{
 .full-article-container .article-box{
     width:20vw;
 }
+.full-article-container p{
+    border-radius : 14px;
+    text-align:center;
+}
 br+h2{
     font-size:18pt;
     text-align:left;
@@ -68,8 +72,9 @@ br+h2{
 }
 
 img{
-    width:13vw;
+    width:20vw;
     height:auto;
+    left:0vw;
 }
 .carousel-points{
     display:flex;
@@ -95,17 +100,15 @@ a{
 a p{
     color:#749bc2;
     background-color: #f6f4eb;
-    text-align: center;
 }
 a p:hover{
     color:#f6f4eb;
-    transition : background-color 300ms linear;
+    transition : background-color 1000ms linear;
     background-color: #749bc2;
 }
 a p{
-    transition:background-color 300ms linear;
+    transition:background-color 1000ms linear;
 }
-
 
 .class{
     animation-duration:2.5s;
@@ -146,8 +149,4 @@ a p{
 }
 div#point-3{
     background-color:#993548;
-}
-
-.full-article-container p{
-    border-radius : 14px;
 }
