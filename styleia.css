@@ -98,8 +98,13 @@ a p{
 }
 a p:hover{
     color:#f6f4eb;
+    transition : background-color 1000ms linear;
     background-color: #749bc2;
 }
+a p{
+    transition:background-color 1000ms linear;
+}
+
 
 .class{
     animation-duration:2.5s;
