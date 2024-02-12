@@ -74,19 +74,18 @@ br+h2{
 img{
     width:20vw;
     height:auto;
-    left:0vw;
 }
 .carousel-points{
     display:flex;
-    right:-44vw;
     gap:45px;
     font-size:60px;
+    justify-content:center;
 }
 .carousel-points div{
     border-radius:30px;
     background-color:gray;
-    width:15px;
-    height:15px;
+    width:40px;
+    height:40px;
 }
 div#point-1{
     background-color:#993548;
