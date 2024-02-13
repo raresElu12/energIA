@@ -16,7 +16,7 @@ h1,h2{
 }
 img{
     width:12vw;
-    height:12vh;
+    height:auto;
 }
 h2{
     font-size:14pt;
