@@ -71,7 +71,7 @@ async function renderPopularNews(num_art){
     <div id="point-3" onclick="back(3,'-2')"></div>
     <div id="point-4" onclick="test(4,'-2')"></div>
 </div>`;
-    document.body.innerHTML += ` \n\n\n\nCe projet a été réalisé par trois éléves de terminale durant le cours d'enseignement scientifique, dans le but d'informer le public et de mettre en avant les progrès récents faits par les Intelligences Artificielles. Pour nous contacter et nous donner votre avis sur le site, veuillez vous adresser à l'adresse mail suivante : energia.feedback@gmail.com<br><br><br>\n\n\n
+    document.body.innerHTML += ` \n\n\n\n<footer>Ce projet a été réalisé par trois éléves de terminale durant le cours d'enseignement scientifique, dans le but d'informer le public et de mettre en avant les progrès récents faits par les Intelligences Artificielles. Pour nous contacter et nous donner votre avis sur le site, veuillez vous adresser à l'adresse mail suivante : energia.feedback@gmail.com<br><br><br>\n\n\n
 
 
 
