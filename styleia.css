@@ -150,10 +150,3 @@ a p{
 div#point-3{
     background-color:#993548;
 }
-p{
-    text-align:center;
-    color:whitesmoke;
-}
-body:not(#main){
-    background:linear-gradient(90deg, rgb(8, 35, 220,0.8) 30%, rgb(0, 64, 225)) !important;
-}

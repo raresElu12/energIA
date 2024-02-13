@@ -1,0 +1,18 @@
+*{
+    position:relative;
+    font-family:'Quicksand';
+}
+p{
+    text-align:center;
+    color:whitesmoke;
+}
+body{
+    background:linear-gradient(90deg, rgb(8, 35, 220,0.8) 30%, rgb(0, 64, 225)) !important;
+}
+h1,h2{
+    text-align:center;
+    color:#749bc2;
+}
+h2{
+    font-size:14pt;
+}
