@@ -14,6 +14,10 @@ h1,h2{
     text-align:center;
     color:#8a96ff;
 }
+img{
+    width:12vw;
+    height:12vh;
+}
 h2{
     font-size:14pt;
 }
