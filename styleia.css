@@ -7,6 +7,10 @@ body{
     width:100vw;
     overflow-x:hidden;
 }
+h1 img{
+    width:12vw;
+    height:auto;
+}
 h1,h2{
     text-align:center;
     color:#749bc2;
