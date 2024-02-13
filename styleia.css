@@ -150,3 +150,18 @@ a p{
 div#point-3{
     background-color:#993548;
 }
+
+#sondages{
+    display:flex;
+    justify-content:center;
+    gap:20vw;
+}
+#sondages .container{
+    display:flex;
+    flex-direction:row;
+    width:30vw;
+    height:30vh;
+}
+#sondages .container ul{
+    align-self:center;
+}
