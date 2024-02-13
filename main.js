@@ -71,7 +71,14 @@ async function renderPopularNews(num_art){
     <div id="point-3" onclick="back(3,'-2')"></div>
     <div id="point-4" onclick="test(4,'-2')"></div>
 </div>`;
-    document.body.innerHTML += ` \n\n\n\n<br><br><br><br><br><br>    <footer>\n        Ce projet a été réalisé par trois éléves de terminale pendant le cours d'enseignement scientifique, dans le but d'informer le public et mettre en avant les progrès faits par les Intelligences Artificielles ces derniers temps. Pour nous contacter et nous donner votre avis sur le site nous disposons d'une adresse, qui s'adresse à ces deux cas en particulier, l'adresse est : energia.feedback@gmail.com\n\n        <br><br><br><br>\n        I dedicate any and all copyright interest in this software to the\n        public domain. I make this dedication for the benefit of the public at\n        large and to the detriment of my heirs and successors. I intend this\n        dedication to be an overt act of relinquishment in perpetuity of all\n        present and future rights to this software under copyright law.<br><br><br>\n\n        La license précédente s'applique seulement au code source de la page web, toutes les photos utilisées sur ce site web ne m'appartiennent pas. Ces photos ont été créées par l'intelligence artificielle de Bing appelée BingIA.\n    </footer>\n    <br><br><br><br><br><br><br>\n    \n`;
+    document.body.innerHTML += ` \n\n\n\nCe projet a été réalisé par trois éléves de terminale durant le cours d'enseignement scientifique, dans le but d'informer le public et de mettre en avant les progrès récents faits par les Intelligences Artificielles. Pour nous contacter et nous donner votre avis sur le site, veuillez vous adresser à l'adresse mail suivante : energia.feedback@gmail.com<br><br><br>\n\n\n
+
+
+
+    I dedicate any and all copyright interest in this software to the public domain. I make this dedication for the benefit of the public at large and to the detriment of my heirs and successors. I intend this dedication to be an overt act of relinquishment in perpetuity of all present and future rights to this software under copyright law.
+    <br><br><br>\n\n\n
+    
+    La license précédente s'applique seulement au code source de la page web, toutes les images utilisées sur ce site web ne nous appartiennent pas. Ces images ont été générées par l'intelligence artificielle de Microsoft, BingIA.\n    \n`;
 
     for(let i = 1; i<=num_art; i++){
         document.getElementById(`link${i}`).addEventListener("click", () => incrementViewCount(`link${i}`));
