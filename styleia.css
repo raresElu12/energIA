@@ -13,7 +13,7 @@ h1 img{
 }
 h1,h2{
     text-align:center;
-    color:#749bc2;
+    color:#993548;
 }
 h2{
     font-size:14pt;
@@ -158,14 +158,19 @@ div#point-3{
 #sondages{
     display:flex;
     justify-content:center;
-    gap:20vw;
+    flex-wrap:wrap;
+    flex-direction:column;
+    gap:5vh;
 }
-#sondages .container{
+#sondages .container#images{
     display:flex;
     flex-direction:row;
     width:30vw;
     height:30vh;
-}
-#sondages .container ul{
     align-self:center;
+    gap:2vw;
+    right:5vw;
 }
+ #sondages .container#text{
+    align-self:center;
+} 
