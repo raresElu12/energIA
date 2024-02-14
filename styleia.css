@@ -171,6 +171,10 @@ div#point-3{
     gap:2vw;
     right:5vw;
 }
+#sondages .container#images img{
+    width:14vw;
+    height:auto;
+}
  #sondages .container#text{
     align-self:center;
 } 
